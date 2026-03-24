@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@400;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+@theme{
+  --font-display: "Urbanist",sans-serif;
+  --breakpoint-3xl: 1920px;
+  --color-primary: #8DFF69;
+}
+
+@layer base{
+   html{
+    font-family: var(--font-display);
+    scroll-behavior: smooth;
+   } 
+
+
+   body{
+    -webkit-font-smothing: antialiased;
+    -moz-osx-font-smothing: grayscale;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+   }
+
+   /*Custom Scrollbar */
+   ::-webkit-scrollbar{
+    width: 10px;
+   }
+
+   ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8DFF69,#6FE047);
+    border-radius: 5px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    
+   }
+}

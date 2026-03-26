@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Fadein = () => {
+const Fadein = ({children, delay=0, duration=500, threshold=0.1 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        //trigger animation when element enters viewport
+        if (entry.isIntersecting && isVisible ) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: threshold,
+        rootMargin:'0px 0px -50px 0px' //trigger slightly before element is full vi
+      }
+    );
+    if(elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  },[threshold, isVisible]);
+  
   return (
-    <div>
-      
+    <div 
+    ref={elementRef} 
+    className={isVisible ? 'animate-fadeIn' : 'opacity-0'}
+    style={{
+      animationDelay : isVisible ? `${delay}ms` : '0ms' ,
+      animationDirection :`${duration}ms`,
+      animationFillMode : 'both'
+    }}
+    >
+     {children}
     </div>
-  )
-}
+   
+  );
+};
 
-export default Fadein
+export default Fadein;

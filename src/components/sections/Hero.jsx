@@ -68,53 +68,44 @@ const Hero = () => {
 
                        </div>
                        </FadeIn>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                
                   </div>
                   {/** right column - developer image */}
                   <FadeIn delay={200}>
-                    <div className="">
-                      <div className="">
-                      <div className="">
-                      <div className=""></div>
+                    <div className="relative">
+                      <div className="relative overflow-hidden rounded-2xl aspect-4/5 max-w-[500px] ml-auto group">
+                      <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                      <div className="absolute inset-[-2px] bg-linear-to-r from-primary/20 via-primary/10 to-primary animate-spin-slow rounded-2xl"></div>
                       </div>
                       {/*image container */}
-                      <div className="">
+                      <div className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)] ">
                        <img src="developer-portrait.png"
                        alt="Developer at work"
-                       className=""
+                       className="w-full h-full object-cover"
                        />
                       </div>
                       {/**technology logos */}
-                      <div className="">
+                      <div className="absolute bottom-6 left-6 z-20">
                         <FadeIn delay={500}>
-                          <div className="">
-                            <div className="">
-                              <SiReact className=""/>
+                          <div className="flex items-center gap-4 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full">
+                            <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transformduration" >
+                              <SiReact className="w-full h-full text-primary"/>
                               </div>
 
-                              <div className=""> 
-                                <SiNextdotjs className=""/>
+                              <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transformduration"> 
+                                <SiNextdotjs className="w-full h-full text-primary"/>
                                 </div>
 
-                                <div className="">
-                                  <SiNodedotjs  className=""/>
+                                <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transformduration">
+                                  <SiNodedotjs  className="w-full h-full text-primary"/>
                                   </div>
 
-                                  <div className="">
-                                    <SiTailwindcss className=""/>
+                                  <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transformduration">
+                                    <SiTailwindcss className="w-full h-full text-primary"/>
                                     </div>
 
-                                    <div className="">
-                                      <SiMongodb className=""/>
+                                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transformduration">
+                                      <SiMongodb className="w-full h-full text-primary"/>
                                       </div>
                                       </div>
                                       </FadeIn>
@@ -126,6 +117,14 @@ const Hero = () => {
                   
                   </div>
                   </div>
+
+                  {/**scroll indicator */}
+                  <button
+                  onClick={() => scrollToSection('about')}
+                  className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+                  >
+                    <ChevronDown className="w-8 h-8 text-primary"/>
+                    </button>
                   </section>
   )
 }

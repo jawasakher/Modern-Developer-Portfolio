@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
-const Fadein = ({children, delay=0, duration=500, threshold=0.1 }) => {
+const FadeIn = ({children, delay=0, duration=500, threshold=0.1 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
@@ -8,7 +8,7 @@ const Fadein = ({children, delay=0, duration=500, threshold=0.1 }) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         //trigger animation when element enters viewport
-        if (entry.isIntersecting && isVisible ) {
+        if (entry.isIntersecting ) {
           setIsVisible(true);
         }
       },
@@ -33,7 +33,7 @@ const Fadein = ({children, delay=0, duration=500, threshold=0.1 }) => {
     className={isVisible ? 'animate-fadeIn' : 'opacity-0'}
     style={{
       animationDelay : isVisible ? `${delay}ms` : '0ms' ,
-      animationDirection :`${duration}ms`,
+      animationDuration: `${duration}ms`,
       animationFillMode : 'both'
     }}
     >
@@ -43,4 +43,4 @@ const Fadein = ({children, delay=0, duration=500, threshold=0.1 }) => {
   );
 };
 
-export default Fadein;
+export default FadeIn;

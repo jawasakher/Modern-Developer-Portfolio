@@ -37,11 +37,11 @@ I am continuously learning and improving my skills in frontend development, UI/U
  export const STATS = [
   {
     label: 'Years of Experience',
-    value: '3+',
+    value: '1+',
   },
   {
     label: 'Projects Completed',
-    value: '50+',
+    value: '20+',
   },
   {
     label: 'Technologies Mastered',

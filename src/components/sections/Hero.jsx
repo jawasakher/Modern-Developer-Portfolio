@@ -10,7 +10,7 @@ import RadialGradientBackground from '../backgrounds/RadialGradientBackground';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black ">
-      {/*  <RadialGradientBackground  variant="hero"/> */}
+        <RadialGradientBackground  variant="hero"/> 
       {/** content container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

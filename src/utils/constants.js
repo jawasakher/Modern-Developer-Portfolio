@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   
   tagline: 'Crafting modern, user-centered web experiences with clean code and creative design.',
 
-  resume: '/assets/Jawa-Sakher-Resume.pdf',
+  resume: './src/assets/Jawa-Sakher-Resume.pdf',
 
   bio: [
 `I am a dedicated Frontend Developer with a focus on building scalable and visually appealing web applications using modern technologies like React.js.

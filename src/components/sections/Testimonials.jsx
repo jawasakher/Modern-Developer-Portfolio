@@ -1,172 +1,116 @@
-import React,{useState, useRef} from 'react'
-import {ChevronLeft, ChevronRight, Quote, Star} from 'lucide-react';
-import { testimonials } from '../../data/testimonials'
-import FadeIn from'../animations/FadeIn'
+import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
+import { testimonials } from '../../data/testimonials';
+import FadeIn from '../animations/FadeIn';
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollContainerRef = useRef(null);
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const scrollContainerRef = useRef(null);
+  const scrollToIndex = (index) => {
+    setCurrentIndex(index);
+    if (scrollContainerRef.current) {
+      const cardWidth = scrollContainerRef.current.offsetWidth;
+      scrollContainerRef.current.scrollTo({
+        left: cardWidth * index,
+        behavior: 'smooth',
+      });
+    }
+  };
 
-        const scrollToIndex = (index) => {
-            setCurrentIndex(index);
-            if ( scrollContainerRef.current){
-                const cardWidth = scrollContainerRef.current.offsetWidth;
-                scrollContainerRef.current.scrollTo({
-                    left: cardWidth * index,
-                    behavior: 'smooth'
-                });
-            }
-        }; 
-    
-        const nexTastimonial = () => {
-            const newIndex = (currentIndex +1) % testimonials.length;
-            scrollToIndex(newIndex);
-        };
+  const nextTestimonial = () => {
+    const newIndex = (currentIndex + 1) % testimonials.length;
+    scrollToIndex(newIndex);
+  };
 
-        const prevtestimonial = () => {
-            const newIndex = (currentIndex -1 + testimonials.length) % testimoni
-            scrollToIndex(newIndex);
-        };
+  const prevTestimonial = () => {
+    const newIndex =
+      (currentIndex - 1 + testimonials.length) % testimonials.length;
+    scrollToIndex(newIndex);
+  };
 
-        const testimonialStats = [
-            { value: '3x', label: 'Faster Delivery'},
-            { value: '95%', label:'Client Satisfaction'},
-            { value: '100%', label: 'On-Time Delivery'},
-            { value: '5★', label:'Average Rating'}
-        ];
+  const testimonialStats = [
+    { value: '3x', label: 'Faster Delivery' },
+    { value: '95%', label: 'Client Satisfaction' },
+    { value: '100%', label: 'On-Time Delivery' },
+    { value: '5★', label: 'Average Rating' },
+  ];
+
   return (
-    <section id="testimonials" className="relativ py-20 bg-black overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 opacity-90 rounded full-blue-300 "/>
-             </div>
+    <section id="testimonials" className="relative py-20 bg-black overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        <FadeIn>
+          <div className="text-center mb-16">
+            <Quote className="w-6 h-6 text-primary mx-auto mb-4" />
+            <h2 className="text-4xl text-white mb-4">
+              Trusted by forward-thinking teams
+            </h2>
+          </div>
+        </FadeIn>
 
-             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <FadeIn delay={0}>
-                     <div className="text-center mb-16">
-                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full mb-300">
-                             <Quote className="w-4 h-4 text-primary"/>
-                             <span className="text-sm text-primary font-medium tracking-wider uppercas"> Testimonials</span>
-                             </div>
-                             <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4 max-w-xl mx-">
-                                Trusted by forward-thinking teams
-                                </h2>
-                                <p className="text-lg text-white/60 max-w-xl mx-auto">
-                                    Empowering clients with design-driven, high-quali
-                                    </p>
-                                    </div>
-                                    </FadeIn>
+        <FadeIn delay={100}>
+          <div className="relative">
+            <div
+              ref={scrollContainerRef}
+              className="overflow-x-hidden flex"
+            >
+              {testimonials.map((testimonial, index) => (
+                <div key={testimonial.id} className="w-full shrink-0 px-4">
+                  <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
 
+                    {/* Image */}
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-full md:w-1/3 h-72 object-cover rounded-xl"
+                    />
 
-                                    <FadeIn delay={100}>
-                                        <div className="relative">
-                                            <div
-                                            ref={scrollContainerRef}
-                                            className="overflow-x-hidden scroll-smooth"
-                                            style={{ scrollSnapType: 'x mandatory'}}
-                                            >
-                                                <div className="flex">
-                                                    {testimonials.map((testimonial, index) => (
-                                                        <div
-                                                        key={testimonial.id}
-                                                        className="w-full shrink-0 px-4 "
-                                                        style={{ scrollSnapAlign: 'start'}}
-                                                        >
-                                                            <div className="max-w-4xl mx-auto">
-                                                                  <div className="flex flex-col md:flex-row gap-6 items-stretch ">
-                                                                    {/** Image Section */}
-                                                                    <div className="relative w-full md:w-1/3">
-                                                                        <div className="relative h-72 rounded-2xl overflow-hidden">
-                                                                            <img
-                                                                            src={testimonial.image}
-                                                                            alt={testimonial.name}
-                                                                            className="w-full h-full object-cover grayscale hover:grayscale hover:grayscale-0 transition-all durticion full"
-                                                                            />
-                                                                            {/** Stat Badge Overla */}
-                                                                            <div className="absolute bottom-4 left-4 right-4">
-                                                                                <div className="bg-black/60 rounded-xl p-4 shadow-lg">
-                                                                                    <div className="">
-                                                                                        <div className="text-2xl font-semibold text-primary mb-1">
-                                                                                            {testimonialStats[index]?.value}
-                                                                                            </div>
-                                                                                            <div className="text-sm font-semibold text-gray-100">
-                                                                                                {testimonialStats[index]?.label}
-                                                                                           </div>
-                                                                                           </div>
-                                                                                           </div>
-                                                                                           </div>
-                                                                                           </div>
-                                                                                           </div>
-                                                                                           <div className="flex-1 flex flex-col justify-between py-4">
-                                                                                            {/** Quote */}
-                                                                                            <div className="">
-                                                                                                <Quote className="">
-                                                                                                    <p className="">
-                                                                                                        "{testimonial.quote}"
-                                                                                                        </p>
-                                                                                                        </div>
-                                                                                                        <div className="">
-                                                                                                            <div>
-                                                                                                                <div className="">
-                                                                                                                    {testimonial.name}
-                                                                                                                    </div>
-                                                                                                                    <div className="">
-                                                                                                                        {testimonial.role},{testimonial.company}
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div className="">
-                                                                                                                            {[...Array(testimonial.rating)] .map((_,index)  =>(
+                    {/* Content */}
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div>
+                        <Quote className="w-6 h-6 text-primary mb-3" />
+                        <p className="text-white text-lg">
+                          "{testimonial.quote}"
+                        </p>
+                      </div>
 
-                                                                                                                            
-                                                                                                                            <Star key={i} className="">
-                                                                                                                                 ))}
-                                                                                                                                 </div>
-                                                                                                                                 </div>
-                                                                                                                                 </div>
-                                                                                                                                 </div>
-                                                                                                                                 </div>
-                                                                                                                                 </div>
-                                                                                                                                ))}
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                <div classeName="">
-                                                                                                                                    {testimonials.map((_,index) => (
-                                                                                                                                        <button
-                                                                                                                                        key={index}
-                                                                                                                                        onClick={() => scrollToIndex(index)}
-                                                                                                                                        className={`transition-all duration_300 rounded-full ${index === currentIndex
-                                                                                                                                            ?'bg-white w-6 h-2'
-                                                                                                                                            :'bg-white/30 w-2 h-2 hover:bg-white/'
-                                                                                                                                        }`}
-                                                                                                                                        aria-label={`Go to testimonial ${index +1 }`}
-                                                                                                                                        />
+                      <div className="flex items-center justify-between mt-4">
+                        <div>
+                          <h4 className="text-white font-semibold">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-gray-400 text-sm">
+                            {testimonial.role}, {testimonial.company}
+                          </p>
+                        </div>
 
-                                                                                                                                    ))}
-                                                                                                                                        </div>
+                        {/* Stars */}
+                        <div className="flex">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-yellow-400" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-                                                                                                                                        <button 
-                                                                                                                                         onClick={PrevTestimonial}
-                                                                                                                                         className=""
-                                                                                                                                         aria-label="Previous testimonial"
-                                                                                                                                        >
+            {/* Buttons */}
+            <button onClick={prevTestimonial}>
+              <ChevronLeft />
+            </button>
 
-                                                                                                                                            <ChevronLeft className=""/>
-                                                                                                                                            </button>
+            <button onClick={nextTestimonial}>
+              <ChevronRight />
+            </button>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+};
 
-                                                                                                                                            <button
-                                                                                                                                            onClick={nextTestimonial}
-                                                                                                                                            className=""
-                                                                                                                                            aria-label="Next testimonial"
-                                                                                                                                            >
-                                                                                                                                                <ChevronRight className=""/>
-                                                                                                                                                </button>
-                                                                                                                                                </div>
-                                                                                                                                                </FadeIn>
-                                                                                                                                                </div>
-                                                                                                                                                </section>
-                                     
-
-  )
-}
-
-export default Testimonials 
+export default Testimonials;
+                                                    

@@ -34,12 +34,13 @@ const Services = () => {
                   <Wrench className="w-4 h-4 text-primary"/>
                   <span className="text-sm text-primary font-medium tracking-wider uppercas">What I Offer</span>
                   </div>
-                  <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4 max-w-2xl ">
-                    Built for innovation, designed for impact. I offer a comprehensive suite of services to transform your ideas into reality. From crafting intuitive user interfaces to developing robust backend systems, I specialize in creating seamless digital experiences that captivate and engage users. Whether you're looking to build a new application from scratch or enhance an existing one, my expertise in full-stack development ensures that your project is executed with precision and creativity.
-                  </h2>
-                  <p className="text-lg text-white/60 max-w-xl mx-auto">
-                    Comprehensive solutions for your digital needs. I offer a wide range of services, including:
-                    </p>
+                  <h2 className="text-3xl lg:text-4xl font-normal text-white mb-3 max-w-2xl mx-auto leading-relaxed">
+  Built for innovation, designed for impact.
+</h2>
+<p className="text-lg text-white/60 max-w-xl mx-auto mb-4">
+  crafting intuitive user interfaces to developing robust backend systems.
+</p>
+
                     </div>
                     </FadeIn>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -48,7 +49,7 @@ const Services = () => {
                       
                       return (
                         <FadeIn key={service.id} delay={100 + index * 100}>
-                          <div className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-primary/30 transition-all duration-300 h-full min-h-[280px] flex flex-color">
+                          <div className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-primary/30 transition-all duration-300 h-full min-h-[280px] flex flex-col">
                             <div className="mb-6">
                               <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <IconComponent className="w-8 h-8 text-primary"/>

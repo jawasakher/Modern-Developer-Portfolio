@@ -1,37 +1,5 @@
 export const projects = [
-  {
-    id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce app with secure payments and real-time inventory.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d',
-    category: 'Full Stack',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    metrics: '40% increase in conversion',
-    githubUrl: 'https://github.com',
-    demoUrl: 'https://timetoprogram.com/projects/ecommerce'
-  },
-  {
-    id: 2,
-    title: 'Real Estate Website',
-    description: 'Modern real estate platform with listings and property details.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa',
-    category: 'Web Apps',
-    technologies: ['React', 'Tailwind', 'Firebase'],
-    metrics: '30% increase in engagement',
-    githubUrl: 'https://github.com',
-    demoUrl: 'https://timetoprogram.com/projects/real-estate'
-  },
-  {
-    id: 3,
-    title: 'Task Manager',
-    description: 'Task tracking app with real-time updates.',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-    category: 'Full Stack',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    metrics: '50% faster task completion',
-    githubUrl: 'https://github.com',
-    demoUrl: 'https://timetoprogram.com/projects/task-manager'
-  },
+
   {
     id: 4,
     title: 'AI Content Generator',
@@ -40,8 +8,8 @@ export const projects = [
     category: 'AI Web App',
     technologies: ['Next.js', 'OpenAI'],
     metrics: '60% productivity boost',
-    githubUrl: 'https://github.com',
-    demoUrl: 'https://timetoprogram.com/projects/ai-generator'
+    githubUrl: 'https://github.com/jawasakher/Agency.AI.git',
+    demoUrl: 'https://angency12.netlify.app/'
   },
   {
     id: 5,
@@ -51,16 +19,25 @@ export const projects = [
     category: 'Marketing',
     technologies: ['SEO', 'Analytics'],
     metrics: '45% ROI increase',
-    githubUrl: 'https://github.com',
-    demoUrl: 'https://timetoprogram.com/projects/marketing-campaign'
-  }
+    githubUrl: 'https://github.com/jawasakher/Skyreach.git',
+    demoUrl: ' https://skyreach24.netlify.app/'
+  },
+  {
+  id: 6,
+  title: 'Weather Forecast App',
+  description: 'Modern weather application providing real-time forecasts',
+  image: 'https://images.unsplash.com/photo-1501973801540-537f08ccae7b',
+  category: 'Web App',
+  technologies: ['React', 'API', 'Tailwind CSS', 'Geolocation'],
+  metrics: 'Real-time data & 99% uptime',
+  githubUrl: 'https://github.com/jawasakher/weather-app.git',
+  demoUrl: 'https://your-weather-app.netlify.app/'
+}
 ];
 
 export const categories = [
   'All',
-  'Web Apps',
-  'UI Components',
-  'Full Stack',
+  
   'Marketing',
   'AI Web App'
 ];

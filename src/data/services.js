@@ -14,18 +14,8 @@ export const services = [
     title: 'Frontend Development',
     description: 'Building responsive and interactive web interfaces using modern frameworks like React and Vue.'
   },
-  {
-    id: 2,
-    icon: MdStorage,
-    title: 'Backend Development',
-    description: 'Designing scalable server-side applications and APIs with Node.js, Express, and databases like MongoDB.'
-  },
-  {
-    id: 3,
-    icon: MdPhoneIphone,
-    title: 'Mobile App Development',
-    description: 'Creating cross-platform mobile apps with React Native or Flutter for iOS and Android.'
-  },
+ 
+ 
   {
     id: 4,
     icon: MdPalette,

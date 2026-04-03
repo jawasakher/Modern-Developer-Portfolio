@@ -1,7 +1,7 @@
 export const projects = [
 
   {
-    id: 4,
+    id: 1,
     title: 'AI Content Generator',
     description: 'Generate marketing content using AI.',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
@@ -12,7 +12,7 @@ export const projects = [
     demoUrl: 'https://angency12.netlify.app/'
   },
   {
-    id: 5,
+    id: 2,
     title: 'Marketing Campaign',
     description: 'Advanced marketing analytics and optimization.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
@@ -23,21 +23,43 @@ export const projects = [
     demoUrl: ' https://skyreach24.netlify.app/'
   },
   {
-  id: 6,
+  id: 3,
   title: 'Weather Forecast App',
-  description: 'Modern weather application providing real-time forecasts',
+  description: 'Modern weather application providing real-time forecasts.',
   image: 'https://images.unsplash.com/photo-1501973801540-537f08ccae7b',
   category: 'Web App',
   technologies: ['React', 'API', 'Tailwind CSS', 'Geolocation'],
   metrics: 'Real-time data & 99% uptime',
-  githubUrl: 'https://github.com/jawasakher/weather-app.git',
-  demoUrl: 'https://your-weather-app.netlify.app/'
+  githubUrl: 'https://github.com/jawasakher/weather.web.git',
+ 
+},
+{
+  id: 4,
+  title: 'E-Learning Platform',
+  description: 'Interactive learning platform with courses, progress tracking.',
+  image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+  category: 'Marketing',
+  technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+  metrics: '500+ users & 85% course completion rate',
+  githubUrl: 'https://github.com/jawasakher/my-website.git',
+  
+},
+{
+  id: 5,
+  title: 'NextGen E-Learning Platform',
+  description: 'A modern educational web app featuring personalized learning paths.',
+  image: 'https://images.unsplash.com/photo-1593642634367-d91a135587b5',
+  category: 'Marketing',
+  technologies: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'OpenAI API'],
+  metrics: '1,000+ active users, 90% course completion rate, AI-driven recommendations',
+  githubUrl: 'https://github.com/jawasakher/portfolio.git',
+ 
 }
 ];
 
 export const categories = [
   'All',
-  
+ 
   'Marketing',
   'AI Web App'
 ];

@@ -7,23 +7,25 @@ import Projects from "./components/sections/Projects";
 import Services from "./components/sections/Services";
 
 import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 
 const App = () => {
   return (
-    <div className='min-h-screen bg-black pb-[100vh]'>
-      <Navbar/> 
-      
-      <main> 
-        <Hero/>
-        <About/>
-        <Skills/>
-        <Projects/>
-        <Services/>
-        
-        <Contact/>
-        </main>
-    </div>
+ <div className='min-h-screen bg-black flex flex-col'>
+  <Navbar/>
+
+  <main className="flex-grow">
+    <Hero/>
+    <About/>
+    <Skills/>
+    <Projects/>
+    <Services/>
+    <Contact/>
+  </main>
+
+  <Footer/>
+</div>
   );
 };
 

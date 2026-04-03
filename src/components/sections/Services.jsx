@@ -8,7 +8,7 @@ import { MdDesktopWindows } from "react-icons/md";
 const Services = () => {
   return (
     
-      <section id="Services" className="relative py-20 bg-black overflow-hidden">
+      <section id="services" className="relative py-20 bg-black overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 opacity-20 rounded-full blur-3xl"/>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 opacity-20 rounded-full blur-3xl"/>

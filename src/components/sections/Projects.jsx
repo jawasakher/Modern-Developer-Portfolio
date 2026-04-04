@@ -56,22 +56,22 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="relative py-20 bg-black overflow-hidden">
+        <section id="projects" className="relative overflow-hidden bg-black py-24">
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/3 right-0 w-96 h-96 bg-primary/20 opacity-20 rounded-full blur-3xl"/>
-                <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-primary/20 opacity-20 rounded-full blur-3xl"/>
-                <div className="absolute top-1/2 right-1/3 w-96 h-96 bg-primary/10 opacity-20 rounded-full blur-3xl"/>
+                <div className="absolute top-1/3 right-0 h-96 w-96 rounded-full bg-[#6FE047]/20 opacity-20 blur-3xl"/>
+                <div className="absolute bottom-1/3 left-0 h-96 w-96 rounded-full bg-[#6FE047]/20 opacity-20 blur-3xl"/>
+                <div className="absolute top-1/2 right-1/3 h-96 w-96 rounded-full bg-[#6FE047]/10 opacity-20 blur-3xl"/>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <FadeIn delay={0}>
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30">
-                            <Briefcase className="w-4 h-4 text-primary" />
-                            <span className="text-sm text-primary font-medium">My Work</span>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-[#6FE047]/30 bg-[#6FE047]/10 px-4 py-2">
+                            <Briefcase className="w-4 h-4 text-[#6FE047]" />
+                            <span className="text-sm font-medium text-[#6FE047]">My Work</span>
                         </div>
 
-                        <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4">
+                        <h2 className="mb-4 text-4xl font-semibold text-white lg:text-5xl">
                             Featured Projects
                         </h2>
 
@@ -83,21 +83,21 @@ const Projects = () => {
 
                 {/* Category Filter */}
                 <FadeIn delay={100}>
-                    <div className="flex flex-wrap justify-center gap-16 mb-8">
+                    <div className="mb-8 flex flex-wrap justify-center gap-4">
                         {categories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => handleCategoryChange(category)}
-                                className={`group relative px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                                className={`group relative rounded-full px-6 py-3 font-medium transition-all duration-300 ${
                                     activeCategory === category
                                         ? 'text-white'
                                         : 'text-white/60 hover:text-white'
                                 }`}
                             >
-                                <div className={`absolute inset-0 rounded-full transition-all duration-300 ${
+                                <div className={`absolute inset-0 rounded-full border transition-all duration-300 ${
                                     activeCategory === category
-                                        ? 'bg-primary/10 opacity-100'
-                                        : 'bg-white/5 border border-white/10 group-hover:bg-white/100'
+                                        ? 'border-[#6FE047]/45 bg-[#6FE047]/15 opacity-100'
+                                        : 'border-white/10 bg-white/5 group-hover:border-[#6FE047]/30 group-hover:bg-white/10'
                                 }`}/>
 
                                 <div className="relative flex items-center gap-2">
@@ -106,7 +106,7 @@ const Projects = () => {
                                 </div>
 
                                 {activeCategory === category && (
-                                    <div className="absolute inset-0 rounded-full bg-primary blur-xl"/>
+                                    <div className="absolute inset-0 rounded-full bg-[#6FE047]/20 blur-xl"/>
                                 )}
                             </button>
                         ))}
@@ -138,7 +138,7 @@ const Projects = () => {
                                 <button
                                     onClick={prevSlide}
                                     disabled={currentIndex === 0}
-                                    className="flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
+                                    className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-[#6FE047]/30 bg-black/55 backdrop-blur-sm transition-all duration-300 hover:bg-[#6FE047]/20 disabled:cursor-not-allowed disabled:opacity-50 lg:h-12 lg:w-12 lg:-translate-x-4"
                                     aria-label="Previous projects"
                                 >
                                     <ChevronLeft className="w-6 h-6 text-white"/>
@@ -147,7 +147,7 @@ const Projects = () => {
                                 <button
                                     onClick={nextSlide}
                                     disabled={currentIndex >= filteredProjects.length - 3}
-                                    className="flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 lg:translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
+                                    className="absolute right-0 top-1/2 z-10 flex h-10 w-10 translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-[#6FE047]/30 bg-black/55 backdrop-blur-sm transition-all duration-300 hover:bg-[#6FE047]/20 disabled:cursor-not-allowed disabled:opacity-50 lg:h-12 lg:w-12 lg:translate-x-4"
                                     aria-label="Next projects"
                                 >
                                     <ChevronRight className="w-6 h-6 text-white"/>
@@ -164,7 +164,7 @@ const Projects = () => {
                                         onClick={() => scrollToIndex(index)}
                                         className={`transition-all duration-300 rounded-full ${
                                             index === currentIndex
-                                                ? 'bg-primary w-6 h-2'
+                                                ? 'h-2 w-6 bg-[#6FE047]'
                                                 : 'bg-white/30 w-2 h-2 hover:bg-white/60'
                                         }`}
                                         aria-label={`Go to slide ${index + 1}`}

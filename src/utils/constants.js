@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   name: 'Jawa Sakher',
   title: 'Frontend Developer | React Specialist & UI/UX Designer',
   email: 'jawasakher@gmail.com',
-  location: 'Konya, Turkey (Open to Remote Work)',
+  location: 'Syria, Latakia (Open to Remote Work)',
   
   tagline: 'Crafting modern, user-centered web experiences with clean code and creative design.',
 

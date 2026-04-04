@@ -5,11 +5,11 @@ import { AiOutlineUser, AiOutlineFundProjectionScreen, AiOutlineTool, AiOutlineM
 const Footer = () => {
   const sections = [
     { id: "about", label: "About", icon: <AiOutlineUser /> },
-    { id: "Skills", label: "Skills", icon: <AiOutlineTool /> },
+    { id: "skills", label: "Skills", icon: <AiOutlineTool /> },
     { id: "projects", label: "Projects", icon: <AiOutlineFundProjectionScreen /> },
     { id: "services", label: "Services", icon: <AiOutlineTool /> },
     { id: "contact", label: "Contact", icon: <AiOutlineMail /> },
-    { id: "contact", label: "Hire Me", icon: <AiOutlinePhone /> },
+    
   ];
 
   const socialLinks = [

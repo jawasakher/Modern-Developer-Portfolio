@@ -41,9 +41,7 @@ const Navbar = () => {
               {link.label}
             </button>
           ))}
-          <button onClick={() => handleNavClick('contact')} className="px-7 py-3.5 bg-white text-[#212121] font-medium rounded-[17px] border border-white hover:bg-white/90 transition duration-300">
-            Hire Me
-          </button>
+          
         </div>
 
         {/* Mobile Toggle */}

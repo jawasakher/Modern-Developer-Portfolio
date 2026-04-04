@@ -14,8 +14,9 @@ const Skills = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => sectionRef.current && observer.unobserve(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) observer.observe(currentSection);
+    return () => currentSection && observer.unobserve(currentSection);
   }, []);
 
   const skillCategories = [
@@ -72,40 +73,40 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className="relative py-32 bg-black overflow-hidden"
+      className="relative overflow-hidden bg-black py-28"
     >
       {/* 🌌 Glow Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-primary/20 blur-[150px] rounded-full"></div>
+        <div className="absolute left-1/2 top-28 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#6FE047]/20 blur-[150px]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="text-center mb-28">
-          <h2 className="text-6xl font-extrabold flex justify-center gap-4 ">
-            <span className="text-sm text-primary font-medium w-4 h-4 text-primary">
+        <div className="mb-20 text-center">
+          <h2 className="flex justify-center gap-4 text-6xl font-extrabold">
+            <span className="h-4 w-4 text-sm font-medium text-[#6FE047]">
               <Code2 className="w-full h-full" />
             </span>
-            <span className="text-4xl lg:text-5xl font-normal text-white mb-4">
+            <span className="mb-4 text-4xl font-semibold text-white lg:text-5xl">
               Tech Stack
             </span>
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-xl mx-auto">
+          <p className="mx-auto mt-6 max-w-xl text-gray-400">
             Building scalable and high-performance applications with modern technologies.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid gap-8 md:grid-cols-3">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
 
             return (
               <div
                 key={category.title}
-                className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl"
+                className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#6FE047]/45 hover:shadow-[0_26px_90px_rgba(111,224,71,0.14)]"
                 style={{
                   transform: visible ? "translateY(0)" : "translateY(80px)",
                   opacity: visible ? 1 : 0,
@@ -130,11 +131,11 @@ const Skills = () => {
                 }}
               >
                 {/* Glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-primary/10 to-transparent rounded-3xl"></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6FE047]/10 to-transparent opacity-0 transition group-hover:opacity-100"></div>
 
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-10">
-                  <Icon className="text-primary w-6 h-6" />
+                  <Icon className="h-6 w-6 text-[#6FE047]" />
                   <h3 className="text-xl font-semibold text-white">
                     {category.title}
                   </h3>
@@ -149,7 +150,7 @@ const Skills = () => {
                       <div key={skill.id}>
                         <div className="flex justify-between mb-2 text-sm">
                           <span className="flex items-center gap-2 text-white/80">
-                            <skill.icon className="w-4 h-4 text-primary" />
+                            <skill.icon className="h-4 w-4 text-[#6FE047]" />
                             {skill.name}
                           </span>
 
@@ -164,7 +165,7 @@ const Skills = () => {
                             style={{
                               width: visible ? `${level}%` : "0%",
                               background:
-                                "linear-gradient(to right, #8DFF69, #22C55E, #06B6D4)",
+                                "linear-gradient(to right, #6FE047, #8ef57a, #c8ffbb)",
                             }}
                           />
                         </div>

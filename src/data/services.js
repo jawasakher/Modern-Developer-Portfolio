@@ -14,8 +14,19 @@ export const services = [
     title: 'Frontend Development',
     description: 'Building responsive and interactive web interfaces using modern frameworks like React and Vue.'
   },
- 
- 
+
+  {
+    id: 2,
+    icon: MdPhoneIphone,
+    title: 'Responsive Web Interfaces',
+    description: 'Designing pixel-perfect, mobile-first layouts that look smooth and consistent across phones, tablets, and desktops.'
+  },
+  {
+    id: 3,
+    icon: MdStorage,
+    title: 'Frontend API Integration',
+    description: 'Connecting frontend applications with REST APIs, handling loading states, error flows, and clean data mapping for real-world products.'
+  },
   {
     id: 4,
     icon: MdPalette,

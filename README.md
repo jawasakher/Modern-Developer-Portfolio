@@ -21,7 +21,7 @@
 ## 🎥 Demo (Preview)
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q3b2s1dGx5a2F5aW1kOHNnNmJzM2V4bWw3Y3k5MG9jNmVhZHZ5ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7aD2saalBwwftBIY/giphy.gif" width="800"/>
+  <img src="developer-portrait.png" width="800"/>
 </p>
 
 ---
@@ -120,7 +120,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ## 📬 Contact Me
 
 * 📧 Email: [jawasakher@gmail.com](mailto:jawasakher@gmail.com)
-* 💼 LinkedIn: https://linkedin.com/in/
+* 💼 LinkedIn: https://linkedin.com/in/jawasakher/
 * 💻 GitHub: https://github.com/jawasakher
 
 ---

@@ -1,16 +1,141 @@
-# React + Vite
+# 🚀 Modern Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/github/stars/jawasakher/Modern-Developer-Portfolio?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/jawasakher/Modern-Developer-Portfolio?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/jawasakher/Modern-Developer-Portfolio?style=for-the-badge" />
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <b>A modern, interactive, and high-performance portfolio built with React & Tailwind.</b>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 https://your-live-demo-link.com
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎥 Demo (Preview)
+
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q3b2s1dGx5a2F5aW1kOHNnNmJzM2V4bWw3Y3k5MG9jNmVhZHZ5ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7aD2saalBwwftBIY/giphy.gif" width="800"/>
+</p>
+
+---
+
+## ✨ Features
+
+* ⚡ Blazing fast performance
+* 🎨 Clean & modern UI/UX
+* 🧠 Interactive components
+* 🎬 Smooth animations (Framer Motion)
+* 📱 Fully responsive (all devices)
+* 🌙 Dark mode support
+* 📬 Working contact form (EmailJS)
+* 🔥 Scalable architecture
+
+---
+
+## 🛠️ Tech Stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,tailwind,js,html,css,git,github,vscode" />
+</p>
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+ ├── components/
+ ├── sections/
+ ├── data/
+ ├── assets/
+ └── App.jsx
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/jawasakher/Modern-Developer-Portfolio.git
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## 📊 Lighthouse Score
+
+🚀 Performance: 95+
+🎯 Accessibility: 90+
+⚡ Best Practices: 95+
+📈 SEO: 90+
+
+---
+
+## 💡 What makes this project special?
+
+Unlike typical portfolios, this project focuses on:
+
+* Storytelling & personal branding
+* Real project impact (not just visuals)
+* Smooth user experience
+* Clean, production-ready code
+
+---
+
+## 🧠 Future Improvements
+
+* 🔥 Add blog section
+* 🤖 Integrate AI chatbot
+* 🌍 Multi-language support
+* 📊 GitHub API integration
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+---
+
+## 📬 Contact Me
+
+* 📧 Email: [jawasakher@gmail.com](mailto:jawasakher@gmail.com)
+* 💼 LinkedIn: https://linkedin.com/in/
+* 💻 GitHub: https://github.com/jawasakher
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ to support!
+
+---
+
+## 👨‍💻 Author
+
+**Jawa Sakher**
+Frontend Developer | React Enthusiast 🚀
+
+<p align="center">
+  Made by Jawa
+</p>

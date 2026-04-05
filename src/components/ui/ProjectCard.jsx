@@ -2,15 +2,50 @@ import React from 'react'
 import { ExternalLink, TrendingUp } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'  
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onMediaLoad }) => {
   const { title, description, image, technologies, metrics, demoUrl, githubUrl, category } = project;
+  const isUnsplash = typeof image === 'string' && image.includes('images.unsplash.com');
+  const buildUnsplashUrl = (w, q = 55) => {
+    if (!isUnsplash) return image;
+    // URLs in data already include query params; keep it regex-based to avoid URL() edge cases.
+    let next = image;
+    if (/[?&]w=\d+/.test(next)) next = next.replace(/([?&])w=\d+/, `$1w=${w}`);
+    else next += (next.includes('?') ? '&' : '?') + `w=${w}`;
+
+    if (/[?&]q=\d+/.test(next)) next = next.replace(/([?&])q=\d+/, `$1q=${q}`);
+    else next += `&q=${q}`;
+
+    return next;
+  };
+
+  const imgSrc = isUnsplash ? buildUnsplashUrl(900) : image;
+  const imgSrcSet = isUnsplash
+    ? [
+        `${buildUnsplashUrl(500)} 500w`,
+        `${buildUnsplashUrl(800)} 800w`,
+        `${buildUnsplashUrl(1100)} 1100w`,
+      ].join(', ')
+    : undefined;
+
+  const imgSizes = isUnsplash
+    ? '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
+    : undefined;
 
   return (
     <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-white/5">
         <img
-          src={image}
+          src={imgSrc}
+          srcSet={imgSrcSet}
+          sizes={imgSizes}
           alt={title}
+          onLoad={onMediaLoad}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          draggable={false}
+          width={1200}
+          height={800}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"/>
@@ -20,7 +55,7 @@ const ProjectCard = ({ project }) => {
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              className="p-2.5 bg-white/10 xl:backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-110"
               title="View Demo"
             >
               <ExternalLink className="w-4 h-4 text-white"/>
@@ -31,7 +66,7 @@ const ProjectCard = ({ project }) => {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              className="p-2.5 bg-white/10 xl:backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-110"
               title="View Code"
             >
               <FaGithub className="w-4 h-4 text-white"/> {/* ← استخدم FaGithub */}

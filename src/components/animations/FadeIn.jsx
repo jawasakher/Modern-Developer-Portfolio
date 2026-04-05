@@ -5,6 +5,8 @@ const FadeIn = ({children, delay=0, duration=500, threshold=0.1 }) => {
   const elementRef = useRef(null);
 
   useEffect(() => {
+    if (isVisible) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         //trigger animation when element enters viewport
@@ -14,16 +16,14 @@ const FadeIn = ({children, delay=0, duration=500, threshold=0.1 }) => {
       },
       {
         threshold: threshold,
-        rootMargin:'0px 0px -50px 0px' //trigger slightly before element is full vi
+        rootMargin:'0px'
       }
     );
     if(elementRef.current) {
       observer.observe(elementRef.current);
     }
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
+      observer.disconnect();
     };
   },[threshold, isVisible]);
   

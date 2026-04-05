@@ -16,8 +16,8 @@
 
 
    body{
-    -webkit-font-smothing: antialiased;
-    -moz-osx-font-smothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: #000000;
     color: #ffffff;
     overflow-x: hidden;
@@ -76,8 +76,8 @@
     }
   }
   /* Utility classes*/
-  .animate-fodeIn{
-    animation: fedeIn 0.5s ease-out;
+  .animate-fadeIn{
+    animation: fadeIn 0.5s ease-out;
   }
    
   .animate-pulse{

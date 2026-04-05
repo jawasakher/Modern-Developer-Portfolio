@@ -75,13 +75,14 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={400}>
-              <button
-                onClick={() => window.open(PERSONAL_INFO.resume, '_blank')}
+              <a
+                href={PERSONAL_INFO.resume}
+                download
                 className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-8 py-4 text-black font-semibold shadow-[0_20px_60px_rgba(111,224,71,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_90px_rgba(111,224,71,0.3)]"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
-              </button>
+              </a>
             </FadeIn>
 
           </div>

@@ -1,5 +1,7 @@
 
 
+import resumePdfUrl from '../assets/Jawa-Sakher-Resume.pdf';
+
 export const PERSONAL_INFO = {
 
   name: 'Jawa Sakher',
@@ -9,7 +11,7 @@ export const PERSONAL_INFO = {
   
   tagline: 'Crafting modern, user-centered web experiences with clean code and creative design.',
 
-  resume: './src/assets/Jawa-Sakher-Resume.pdf',
+  resume: resumePdfUrl,
 
   bio: [
 `I am a dedicated Frontend Developer with a focus on building scalable and visually appealing web applications using modern technologies like React.js.

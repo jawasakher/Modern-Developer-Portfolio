@@ -1,0 +1,10 @@
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+# If you use client-side routing (SPA), keep this redirect.
+# Netlify serves existing static files first, so it won't break /assets.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

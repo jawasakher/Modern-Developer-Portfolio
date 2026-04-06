@@ -20,7 +20,7 @@ export const projects = [
     technologies: ['SEO', 'Analytics'],
     metrics: '45% ROI increase',
     githubUrl: 'https://github.com/jawasakher/Skyreach.git',
-    demoUrl: 'https://agency.jawasakher.workers.dev/'
+    demoUrl: 'https://skyreach.jawasakher.workers.dev/'
   },
   {
   id: 3,

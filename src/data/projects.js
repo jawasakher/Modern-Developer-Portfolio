@@ -9,7 +9,7 @@ export const projects = [
     technologies: ['Next.js', 'OpenAI'],
     metrics: '60% productivity boost',
     githubUrl: 'https://github.com/jawasakher/Agency.AI.git',
-    demoUrl: 'https://angency12.netlify.app/'
+    demoUrl: 'https://agency.jawasakher.workers.dev/'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const projects = [
     technologies: ['SEO', 'Analytics'],
     metrics: '45% ROI increase',
     githubUrl: 'https://github.com/jawasakher/Skyreach.git',
-    demoUrl: 'https://skyreach24.netlify.app/'
+    demoUrl: 'https://agency.jawasakher.workers.dev/'
   },
   {
   id: 3,

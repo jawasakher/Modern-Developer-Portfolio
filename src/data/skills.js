@@ -14,6 +14,9 @@ import {
   SiRedux,
   SiNextdotjs,
   SiTailwindcss,
+  SiExpress,
+  SiPostgresql,
+  SiPrisma,
 } from "react-icons/si";
 
 export const skills = [
@@ -89,13 +92,34 @@ export const skills = [
   },
   {
     id: 11,
+    name: "Express.js",
+    icon: SiExpress,
+    level: "Intermediate",
+    experience: "2+ years",
+  },
+  {
+    id: 12,
+    name: "PostgreSQL",
+    icon: SiPostgresql,
+    level: "Intermediate",
+    experience: "2+ years",
+  },
+  {
+    id: 13,
+    name: "Prisma ORM",
+    icon: SiPrisma,
+    level: "Intermediate",
+    experience: "2+ years",
+  },
+  {
+    id: 14,
     name: "MongoDB",
     icon: FaDatabase,
     level: "Intermediate",
     experience: "2+ years",
   },
   {
-    id: 12,
+    id: 15,
     name: "Git & GitHub",
     icon: FaGitAlt,
     level: "Expert",

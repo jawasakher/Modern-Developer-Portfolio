@@ -30,7 +30,9 @@ const Skills = () => {
     {
       title: "Backend",
       icon: Server,
-      skills: skills.filter((s) => ["Node.js", "MongoDB"].includes(s.name)),
+        skills: skills.filter((s) =>
+          ["Node.js", "Express.js", "PostgreSQL", "Prisma ORM", "MongoDB"].includes(s.name)
+        ),
     },
     {
       title: "Tools",

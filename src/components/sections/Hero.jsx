@@ -29,17 +29,17 @@ const Hero = () => {
                   <FadeIn delay={100}>
 
                       <h1 className="mb-6 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
-                    Frontend Engineer
+                    Full-Stack Developer
                        <br />
                         <span className="text-[#6FE047]">
-                    React & Modern Web Technologies  
+                    React, Node.js & PostgreSQL
                        </span>
                        </h1>
                    </FadeIn>
 
                      <FadeIn delay={200}>
                      <p className="mb-8 max-w-[550px] text-lg leading-relaxed text-white/70">
-                      Building performant, scalable, and visually engaging web applications
+                      Building complete, scalable web applications from polished interfaces to reliable backend systems.
                       </p>
                      </FadeIn>
                       <FadeIn delay={300}>

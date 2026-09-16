@@ -5,24 +5,22 @@ import resumePdfUrl from '../assets/Jawa-Sakher-Resume.pdf';
 export const PERSONAL_INFO = {
 
   name: 'Jawa Sakher',
-  title: 'Frontend Developer | React Specialist & UI/UX Designer',
+  title: 'Full-Stack Developer | React, Node.js & PostgreSQL',
   email: 'jawasakher@gmail.com',
   location: 'Syria, Latakia (Open to Remote Work)',
   
-  tagline: 'Crafting modern, user-centered web experiences with clean code and creative design.',
+  tagline: 'Building complete web experiences from polished interfaces to reliable backend systems.',
 
   resume: resumePdfUrl,
 
   bio: [
-`I am a dedicated Frontend Developer with a focus on building scalable and visually appealing web applications using modern technologies like React.js.
+`I am a Full-Stack Developer focused on building modern web applications from the interface to the backend and database. My development journey started with frontend development and grew into full-stack development through hands-on projects.
 
-I have a strong passion for creating intuitive user interfaces and seamless user experiences. My work combines clean, maintainable code with thoughtful design principles.
+I build modern interfaces with React.js and Tailwind CSS, develop backend services with Node.js and Express.js, and connect products to REST APIs and PostgreSQL databases through Prisma ORM.
 
-I enjoy transforming ideas into real-world digital products, whether it's a business website, a SaaS platform, or a personal brand. I pay attention to performance, accessibility, and user-centered design in every project I build.
+My work includes reusable components, structured application architecture, JWT authentication, password hashing, protected routes, responsive design, and real-world deployment. I learn by building, debugging, and continuously improving complete digital products.
 
-I am continuously learning and improving my skills in frontend development, UI/UX design, and modern web technologies to stay up-to-date in the fast-evolving tech industry.
-
-🚀 Currently open to freelance projects, remote opportunities, and collaborations. `,
+I am currently open to remote opportunities, freelance projects, and collaborations.`,
 
     
   ]
@@ -30,43 +28,43 @@ I am continuously learning and improving my skills in frontend development, UI/U
 };
 
 
- export const SOCIAL_LINKS = {
- github:'https://github.com/jawasakher',
- linkedin:'https://linkedin.com/in/jawasakher',
+export const SOCIAL_LINKS = {
+  github: 'https://github.com/jawasakher',
+  linkedin: 'https://linkedin.com/in/jawasakher',
+};
 
- };
-
- export const STATS = [
+export const STATS = [
   {
-    label: 'Years of Experience',
-    value: '1+',
+    label: 'Development Focus',
+    value: 'Full-Stack',
   },
   {
-    label: 'Projects Completed',
-    value: '20+',
+    label: 'Frontend',
+    value: 'React',
   },
   {
-    label: 'Technologies Mastered',
-    value: '15+',
+    label: 'Backend',
+    value: 'Node.js',
   },
   {
-    label: 'Client Satisfaction',
-    value: '98%',
+    label: 'Database',
+    value: 'PostgreSQL',
   },
 ];
+
 export const ABOUT_STATS = [
-{
-    label:'Happy Clients',
-    value:'45k+',
-},
-{
-    label:'Code Commits',
-    value:'2.5k+'
-},
-{
-    label:'GitHub Stars',
-    value:'500+',
-}
+  {
+    label: 'Frontend',
+    value: 'React',
+  },
+  {
+    label: 'Backend',
+    value: 'Node.js',
+  },
+  {
+    label: 'Data Layer',
+    value: 'PostgreSQL',
+  },
 ];
 export const NAV_LINKS =[
 {

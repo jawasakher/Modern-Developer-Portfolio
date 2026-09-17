@@ -79,7 +79,7 @@ const Skills = () => {
     >
       {/* 🌌 Glow Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-28 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#6FE047]/20 blur-[150px]"></div>
+        <div className="absolute left-1/2 top-28 h-175 w-175 -translate-x-1/2 rounded-full bg-[#6FE047]/20 blur-[150px]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
@@ -133,7 +133,7 @@ const Skills = () => {
                 }}
               >
                 {/* Glow */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6FE047]/10 to-transparent opacity-0 transition group-hover:opacity-100"></div>
+                <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-[#6FE047]/10 to-transparent opacity-0 transition group-hover:opacity-100"></div>
 
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-10">

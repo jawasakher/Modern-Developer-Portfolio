@@ -89,7 +89,7 @@ const Contact = () => {
         <FadeIn delay={100}>
           <div className="relative overflow-hidden rounded-[2rem] border border-[#6FE047]/20 bg-[#090909]/95 shadow-[0_40px_120px_rgba(111,224,71,0.1)]">
             <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-[#6FE047]/10 blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#6FE047]/15 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-[#6FE047]/15 to-transparent" />
 
             <form onSubmit={handleSubmit} className="relative space-y-5 p-8 sm:p-10">
               <input
@@ -122,7 +122,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status.type === 'loading'}
-                className="w-full rounded-3xl bg-gradient-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-6 py-4 text-sm font-semibold text-[#050505] shadow-[0_18px_45px_rgba(111,224,71,0.22)] transition duration-300 hover:shadow-[0_25px_80px_rgba(111,224,71,0.28)] flex items-center justify-center gap-2"
+                className="flex w-full items-center justify-center gap-2 rounded-3xl bg-linear-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-6 py-4 text-sm font-semibold text-[#050505] shadow-[0_18px_45px_rgba(111,224,71,0.22)] transition duration-300 hover:shadow-[0_25px_80px_rgba(111,224,71,0.28)]"
               >
                 Send Message
                 <Send size={18} />

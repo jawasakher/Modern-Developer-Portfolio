@@ -62,7 +62,7 @@ const About = () => {
               <div className="grid grid-cols-3 gap-8">
                 {ABOUT_STATS.map((stat, index) => (
                   <div key={index} className="relative">
-                    <div className="absolute -left-4 top-0 w-1 h-full rounded-full bg-gradient-to-b from-[#6FE047] via-[#6FE047]/50 to-[#6FE047]/20"></div>
+                    <div className="absolute -left-4 top-0 w-1 h-full rounded-full bg-linear-to-b from-[#6FE047] via-[#6FE047]/50 to-[#6FE047]/20"></div>
                     <div className="text-3xl text-white mb-2 font-mono">
                       {stat.value}
                     </div>
@@ -78,7 +78,7 @@ const About = () => {
               <a
                 href={PERSONAL_INFO.resume}
                 download
-                className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-8 py-4 text-black font-semibold shadow-[0_20px_60px_rgba(111,224,71,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_90px_rgba(111,224,71,0.3)]"
+                className="inline-flex items-center gap-3 rounded-full bg-linear-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-8 py-4 text-black font-semibold shadow-[0_20px_60px_rgba(111,224,71,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_90px_rgba(111,224,71,0.3)]"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
@@ -93,7 +93,7 @@ const About = () => {
 
               {/* Card 1 */}
               <div className="col-span-2 relative group">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
                 <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-[#6FE047]/30">
                   <div className="flex items-start gap-4">
                     <div className="rounded-xl bg-[#6FE047]/10 p-3">
@@ -111,7 +111,7 @@ const About = () => {
 
               {/* Card 2 */}
               <div className="relative group">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
                 <div className="relative w-full rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-[#6FE047]/30">
                   <div className="mb-4 w-fit rounded-xl bg-[#6FE047]/10 p-3">
                     <Sparkles className="w-5 h-5 text-[#6FE047]" />
@@ -125,7 +125,7 @@ const About = () => {
 
               {/* Card 3 */}
               <div className="relative group">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
                 <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-[#6FE047]/30">
                   <div className="mb-4 w-fit rounded-xl bg-[#6FE047]/10 p-3">
                     <Download className="w-5 h-5 text-[#6FE047]" />
@@ -139,7 +139,7 @@ const About = () => {
 
               {/* Stats Card */}
               <div className="col-span-2 relative group">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#6FE047]/10 to-[#6FE047]/5 blur-xl opacity-50 transition-opacity group-hover:opacity-75"></div>
                 <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6">
                   <div className="grid grid-cols-3 gap-6 text-center">
 

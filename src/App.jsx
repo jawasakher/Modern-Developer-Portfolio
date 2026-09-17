@@ -15,7 +15,7 @@ const App = () => {
  <div className='min-h-screen bg-black flex flex-col'>
   <Navbar/>
 
-  <main className="flex-grow">
+   <main className="grow">
     <Hero/>
     <About/>
     <Skills/>

@@ -44,7 +44,7 @@ const Hero = () => {
     }, pause);
 
     return () => window.clearTimeout(timer);
-  }, [introIndex, introLines, isDeleting, typedText]);
+  }, [introIndex, isDeleting, typedText]);
 
   return (
     <section className="relative flex min-h-screen items-start overflow-hidden bg-black">
@@ -62,7 +62,7 @@ const Hero = () => {
                    </FadeIn>
 
                      <FadeIn delay={200}>
-                     <p className="hero-type mb-8 min-h-8 max-w-[560px] whitespace-nowrap text-sm font-semibold leading-tight text-[#6FE047] sm:text-lg md:text-2xl lg:text-3xl">
+                     <p className="hero-type mb-8 min-h-8 max-w-140 whitespace-nowrap text-sm font-semibold leading-tight text-[#6FE047] sm:text-lg md:text-2xl lg:text-3xl">
                       <span aria-live="polite">{typedText}</span>
                       <span className="ml-1 inline-block h-5 w-px animate-pulse bg-[#6FE047] align-middle" aria-hidden="true" />
                       </p>
@@ -97,9 +97,9 @@ const Hero = () => {
                   {/** right column - developer image */}
                   <FadeIn delay={200}>
                     <div className="relative lg:pl-8">
-                      <div className="group relative ml-auto aspect-[4/5] max-w-[500px] overflow-hidden rounded-3xl border border-[#6FE047]/20 bg-white/[0.02] p-1">
+                      <div className="group relative ml-auto aspect-4/5 max-w-125 overflow-hidden rounded-3xl border border-[#6FE047]/20 bg-white/2 p-1">
                       <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                      <div className="absolute inset-[-2px] animate-spin-slow rounded-2xl bg-linear-to-r from-[#6FE047]/20 via-[#6FE047]/10 to-[#6FE047]"></div>
+                      <div className="absolute -inset-0.5 animate-spin-slow rounded-2xl bg-linear-to-r from-[#6FE047]/20 via-[#6FE047]/10 to-[#6FE047]"></div>
                       </div>
                       <div className="absolute -bottom-5 -left-3 z-30 w-[min(260px,70%)] rounded-2xl border border-white/15 bg-[#0b0d0b]/90 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
                         <div className="mb-3 flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-white/45">
@@ -122,8 +122,8 @@ const Hero = () => {
                         <span>Design / Build / Scale</span>
                       </div>
                       {/*image container */}
-                      <div className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)] ">
-                       <img src="/developer-portrait.jpg"
+                      <div className="relative m-px h-[calc(100%-2px)] overflow-hidden rounded-2xl ">
+                       <img src="/developer-portrait.png"
                        alt="Jawa Sakher, Full-Stack Developer"
                        className="h-full w-full object-cover object-[center_18%]"
                        />

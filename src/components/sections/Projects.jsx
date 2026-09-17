@@ -19,7 +19,7 @@ const Projects = () => {
     const filteredProjects = useMemo(() => {
         return activeCategory === 'All'
             ? projects
-            : projects.filter(project => project.category === activeCategory);
+            : projects.filter(project => project.category.includes(activeCategory));
     }, [activeCategory]);
 
     const getReducedMotion = () => {
@@ -53,10 +53,11 @@ const Projects = () => {
         if (Math.abs(delta) < 1) return;
 
         const durationMs = 420;
-        const start = performance.now();
+            let start = null;
         setIsAnimating(true);
 
         const step = (now) => {
+                if (start === null) start = now;
             const t = Math.min(1, (now - start) / durationMs);
             // easeOutCubic
             const eased = 1 - Math.pow(1 - t, 3);
@@ -146,7 +147,6 @@ const Projects = () => {
         const onResize = () => refreshCarouselMetrics();
         window.addEventListener('resize', onResize);
         return () => window.removeEventListener('resize', onResize);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -174,7 +174,7 @@ const Projects = () => {
                     else break;
                 }
 
-                const maxIndex = getMaxIndex(filteredProjects.length);
+                const maxIndex = Math.max(0, filteredProjects.length - cardsPerView);
                 idx = Math.max(0, Math.min(idx, maxIndex));
 
                 if (idx !== lastIndexRef.current) {
@@ -200,7 +200,6 @@ const Projects = () => {
 
     useEffect(() => {
         return () => cancelScrollAnimation();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const categoryIcons = {
@@ -283,7 +282,7 @@ const Projects = () => {
                                     <div
                                         key={project.id}
                                         data-project-item="true"
-                                        className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start"
+                                        className="flex h-full w-full shrink-0 snap-start md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                                     >
                                         <ProjectCard project={project} onMediaLoad={scheduleRefresh} />
                                     </div>

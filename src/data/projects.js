@@ -71,7 +71,7 @@ export const projects = [
     problem: 'Learners need one clear place to discover courses and understand their progress.',
     solution: 'An educational product structure built around courses, progress tracking, and focused user flows.',
     architecture: ['React frontend', 'Node.js services', 'MongoDB data layer'],
-    demoUrl: 'https://e-learning-platform-24.jawasakher.workers.dev/',
+    demoUrl: 'https://aivora-ai-chatbot-production.up.railway.app/',
     githubUrl: 'https://github.com/jawasakher/my-website.git'
   },
   {

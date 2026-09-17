@@ -25,15 +25,15 @@ const Services = () => {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#6FE047]/35 bg-[#6FE047]/10 px-4 py-2">
               <Wrench className="h-4 w-4 text-[#6FE047]" />
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#6FE047]">
-                What I Offer
+                What I Build
               </span>
             </div>
 
             <h2 className="mb-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-              Services Crafted For <span className="text-[#6FE047]">Growth And Impact</span>
+              From idea to <span className="text-[#6FE047]">working product</span>
             </h2>
             <p className="text-base leading-relaxed text-white/65 sm:text-lg">
-              From elegant frontends to scalable delivery pipelines, each service is designed to move your product forward with speed and precision.
+              A focused set of capabilities for turning a product idea into a clear, useful, and dependable digital experience.
             </p>
           </div>
         </FadeIn>

@@ -91,12 +91,12 @@ const Skills = () => {
               <Code2 className="w-full h-full" />
             </span>
             <span className="mb-4 text-4xl font-semibold text-white lg:text-5xl">
-              Tech Stack
+              How I Build
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-gray-400">
-            Building scalable and high-performance applications with modern technologies.
+            The tools I use across the product journey, from interface decisions to data and delivery.
           </p>
         </div>
 

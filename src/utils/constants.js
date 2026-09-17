@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   email: 'jawasakher@gmail.com',
   location: 'Syria, Latakia (Open to Remote Work)',
   
-  tagline: 'Building complete web experiences from polished interfaces to reliable backend systems.',
+  tagline: 'Building digital products from thoughtful interfaces to reliable backend systems.',
 
   resume: resumePdfUrl,
 
@@ -35,7 +35,7 @@ export const SOCIAL_LINKS = {
 
 export const STATS = [
   {
-    label: 'Development Focus',
+    label: 'Focus',
     value: 'Full-Stack',
   },
   {
@@ -47,7 +47,7 @@ export const STATS = [
     value: 'Node.js',
   },
   {
-    label: 'Database',
+    label: 'Data Layer',
     value: 'PostgreSQL',
   },
 ];

@@ -3,7 +3,6 @@ import {
   MdStorage, 
   MdPhoneIphone, 
   MdPalette, 
-  MdTrendingUp, 
   MdSettings 
 } from "react-icons/md";
 
@@ -11,38 +10,32 @@ export const services = [
   {
     id: 1,
     icon: MdDesktopWindows,
-    title: 'Frontend Development',
-    description: 'Building responsive and interactive web interfaces using modern frameworks like React and Vue.'
+    title: 'Product Interfaces',
+    description: 'Designing responsive, accessible interfaces with clear states, thoughtful interactions, and reusable React components.'
   },
 
   {
     id: 2,
     icon: MdPhoneIphone,
-    title: 'Responsive Web Interfaces',
-    description: 'Designing pixel-perfect, mobile-first layouts that look smooth and consistent across phones, tablets, and desktops.'
+    title: 'Full-Stack Applications',
+    description: 'Building complete web products that connect polished frontends with reliable backend services and real data.'
   },
   {
     id: 3,
     icon: MdStorage,
-    title: 'Frontend API Integration',
-    description: 'Connecting frontend applications with REST APIs, handling loading states, error flows, and clean data mapping for real-world products.'
+    title: 'API & Data Systems',
+    description: 'Connecting products to REST APIs, authentication, validation, PostgreSQL, MongoDB, and clean data workflows.'
   },
   {
     id: 4,
     icon: MdPalette,
-    title: 'UI/UX Design',
-    description: 'Crafting user-friendly and visually appealing designs for web and mobile applications.'
+    title: 'AI-Powered Features',
+    description: 'Integrating AI where it creates a useful product workflow, from content generation to personalized recommendations.'
   },
   {
     id: 5,
-    icon: MdTrendingUp,
-    title: 'Digital Marketing',
-    description: 'Planning and executing online marketing strategies including SEO, social media, and paid campaigns.'
-  },
-  {
-    id: 6,
     icon: MdSettings,
-    title: 'DevOps & Deployment',
-    description: 'Managing CI/CD pipelines, cloud infrastructure, and deployment for high-availability applications.'
+    title: 'Deployment & Delivery',
+    description: 'Shipping production-ready applications with responsive layouts, performance awareness, and dependable deployment.'
   }
 ];

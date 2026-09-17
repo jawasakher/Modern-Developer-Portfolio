@@ -3,7 +3,7 @@ import { ExternalLink, TrendingUp } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'  
 
 const ProjectCard = ({ project, onMediaLoad }) => {
-  const { title, description, image, technologies, metrics, demoUrl, githubUrl, category } = project;
+  const { title, description, image, technologies, metrics, role, demoUrl, githubUrl, category } = project;
   const isUnsplash = typeof image === 'string' && image.includes('images.unsplash.com');
   const buildUnsplashUrl = (w, q = 55) => {
     if (!isUnsplash) return image;
@@ -32,7 +32,7 @@ const ProjectCard = ({ project, onMediaLoad }) => {
     : undefined;
 
   return (
-    <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
+    <article className="group relative overflow-hidden border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1 hover:border-primary/35">
       <div className="relative h-64 overflow-hidden bg-white/5">
         <img
           src={imgSrc}
@@ -81,21 +81,32 @@ const ProjectCard = ({ project, onMediaLoad }) => {
         </div>
       </div>
 
-      <div className="p-6 space-y-4">
+      <div className="space-y-4 p-6">
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#A8FF8D] transition-colors">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-primary/80">Selected work</span>
+            <span className="font-mono text-[10px] text-white/35">0{project.id}</span>
+          </div>
+          <h3 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-[#A8FF8D]">
             {title}
           </h3>
-          <p className="text-white/60 text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed text-white/60">
             {description}
           </p>
         </div>
+
+        {role && (
+          <div className="border-l border-primary/45 pl-3 text-sm leading-relaxed text-white/75">
+            <span className="mb-1 block text-[10px] uppercase tracking-[0.16em] text-white/40">My role</span>
+            {role}
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg hover:bg-primary/20 transition-colors duration-300"
+              className="border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-colors duration-300 hover:bg-primary/20"
             >
               {tech}
             </span>
@@ -103,13 +114,13 @@ const ProjectCard = ({ project, onMediaLoad }) => {
         </div>
 
         {metrics && (
-          <div className="flex items-center gap-2 pt-3 border-t border-white/10">
+          <div className="flex items-center gap-2 border-t border-white/10 pt-3">
             <TrendingUp className="w-4 h-4 text-green-400"/>
             <p className="text-sm font-medium text-green-400">{metrics}</p>
           </div>
         )}
       </div>
-    </div>
+    </article>
   )
 }
 

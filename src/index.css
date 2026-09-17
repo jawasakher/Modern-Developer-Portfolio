@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@400;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@400;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 
@@ -13,6 +13,12 @@
     font-family: var(--font-display);
     scroll-behavior: smooth;
    } 
+
+  .hero-name,
+  .hero-type{
+   font-family: "Space Grotesk", sans-serif;
+   letter-spacing: 0;
+  }
 
 
    body{

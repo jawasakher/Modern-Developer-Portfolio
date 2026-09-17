@@ -205,7 +205,7 @@ const Projects = () => {
 
     const categoryIcons = {
         'All': Target,
-        'Web Apps': Globe,
+        'Web App': Globe,
         'UI Components': Palette,
         'Full Stack': Zap,
         'Marketing': Sparkles,
@@ -233,7 +233,7 @@ const Projects = () => {
                         </h2>
 
                         <p className="text-lg text-white/60 max-w-2xl mx-auto">
-                            Showcasing my best work and achievements
+                            A closer look at the products, systems, and decisions behind my work.
                         </p>
                     </div>
                 </FadeIn>

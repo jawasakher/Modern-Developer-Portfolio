@@ -33,28 +33,26 @@ const Contact = () => {
     setStatus({ type: 'loading', message: 'Sending...' });
 
     try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      await emailjs.send(
-        'service_1m1970e',
-        'template_whawerf',
+      const response = await emailjs.send(
+        'service_j6fnyhf',
+        'template_mylajw3',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message
         },
-        'M7hHpBMRFZXIE2W8u'
+        'X23S-wXtOs7LLQDRr'
       );
+
+      if (response.status !== 200) {
+        throw new Error(`EmailJS returned status ${response.status}`);
+      }
 
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error(error);
-      setStatus({ type: 'warning', message: 'Message sent but we had a small error.' });
+      console.error('EmailJS error:', error);
+      setStatus({ type: 'error', message: 'Unable to send your message. Please try again or email me directly.' });
     }
   };
 
@@ -123,6 +121,7 @@ const Contact = () => {
 
               <button
                 type="submit"
+                disabled={status.type === 'loading'}
                 className="w-full rounded-3xl bg-gradient-to-r from-[#6FE047] via-[#8ef57a] to-[#c8ffbb] px-6 py-4 text-sm font-semibold text-[#050505] shadow-[0_18px_45px_rgba(111,224,71,0.22)] transition duration-300 hover:shadow-[0_25px_80px_rgba(111,224,71,0.28)] flex items-center justify-center gap-2"
               >
                 Send Message
@@ -139,6 +138,15 @@ const Contact = () => {
                 }`}>
                   {status.message}
                 </div>
+              )}
+
+              {status.type === 'error' && (
+                <a
+                  href="mailto:jawasakher@gmail.com"
+                  className="block text-center text-sm text-white/70 underline underline-offset-4 transition hover:text-[#6FE047]"
+                >
+                  Email me directly
+                </a>
               )}
             </form>
           </div>

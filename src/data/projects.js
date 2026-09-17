@@ -27,11 +27,11 @@ export const projects = [
     solution: 'A focused chatbot interface that keeps the conversation readable, responsive, and easy to continue.',
     architecture: ['React chat interface', 'AI service integration', 'Message and loading states'],
     githubUrl: 'https://github.com/jawasakher/Aivora-AI-Chatbot.git',
-    demoUrl: 'https://aivora-ai-chatbot.jawasakher.workers.dev/'
+    demoUrl: 'https://aivora-ai-chatbot-production.up.railway.app/'
   },
   {
     id: 3,
-    title: 'AI Content Generator',
+    title: 'Agency.AI',
     description: 'Generate marketing content using AI.',
     image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=60',
     category: ['Full Stack', 'AI Web App'],
@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Marketing Campaign',
+    title: 'Skyreach Marketing ',
     description: 'Advanced marketing analytics and optimization.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60',
     category: ['Full Stack'],
@@ -71,7 +71,7 @@ export const projects = [
     problem: 'Learners need one clear place to discover courses and understand their progress.',
     solution: 'An educational product structure built around courses, progress tracking, and focused user flows.',
     architecture: ['React frontend', 'Node.js services', 'MongoDB data layer'],
-    demoUrl: 'https://aivora-ai-chatbot-production.up.railway.app/',
+    demoUrl: 'https://e-learning-platform-24.jawasakher.workers.dev/',
     githubUrl: 'https://github.com/jawasakher/my-website.git'
   },
   {
@@ -86,6 +86,7 @@ export const projects = [
     problem: 'Weather information needs to be quick to scan while remaining useful across changing locations.',
     solution: 'A responsive forecast interface that combines location context with real-time API data.',
     architecture: ['React interface', 'Weather API integration', 'Geolocation and responsive UI'],
+    demoUrl: 'https://weather-forecast-app.jawasakher.workers.dev/',
     githubUrl: 'https://github.com/jawasakher/weather.web.git'
   },
   {

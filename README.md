@@ -21,7 +21,7 @@
 ## 🎥 Demo (Preview)
 
 <p align="center">
-  <img src="public/developer-portrait.png" width="800" alt="Jawa Sakher Full-Stack Developer Portfolio Preview"/>
+  <img src="Developer-portrait.png" width="800" alt="Jawa Sakher Full-Stack Developer Portfolio Preview"/>
 </p>
 
 ---

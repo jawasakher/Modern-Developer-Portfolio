@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <b>A modern, interactive, and high-performance portfolio built with React & Tailwind.</b>
+  <b>A modern, interactive, and high-performance full-stack developer portfolio built with React & Tailwind.</b>
 </p>
 
 ---
@@ -21,7 +21,7 @@
 ## 🎥 Demo (Preview)
 
 <p align="center">
-  <img src="developer-portrait.png" width="800"/>
+  <img src="public/developer-portrait.png" width="800" alt="Jawa Sakher Full-Stack Developer Portfolio Preview"/>
 </p>
 
 ---
@@ -32,10 +32,11 @@
 * 🎨 Clean & modern UI/UX
 * 🧠 Interactive components
 * 🎬 Smooth animations (Framer Motion)
-* 📱 Fully responsive (all devices)
+* 📱 Fully responsive across all devices
 * 🌙 Dark mode support
 * 📬 Working contact form (EmailJS)
-* 🔥 Scalable architecture
+* 🔥 Scalable and maintainable architecture
+* 💻 Full-stack developer personal branding
 
 ---
 
@@ -96,9 +97,10 @@ npm run dev
 Unlike typical portfolios, this project focuses on:
 
 * Storytelling & personal branding
-* Real project impact (not just visuals)
+* Real project impact, not just visuals
 * Smooth user experience
 * Clean, production-ready code
+* Presenting both frontend and backend development capabilities
 
 ---
 
@@ -133,8 +135,8 @@ If you like this project, consider giving it a ⭐ to support!
 
 ## 👨‍💻 Author
 
-**Jawa Sakher**
-Frontend Developer | React Enthusiast 🚀
+**Jawa Sakher**  
+Full-Stack Developer | React | Node.js 🚀
 
 <p align="center">
   Made by Jawa

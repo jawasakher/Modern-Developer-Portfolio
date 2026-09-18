@@ -86,7 +86,7 @@ export const projects = [
     problem: 'Weather information needs to be quick to scan while remaining useful across changing locations.',
     solution: 'A responsive forecast interface that combines location context with real-time API data.',
     architecture: ['React interface', 'Weather API integration', 'Geolocation and responsive UI'],
-    demoUrl: 'https://weather-forecast-app.jawasakher.workers.dev/',
+    demoUrl: 'https://weather-web.jawasakher.workers.dev/',
     githubUrl: 'https://github.com/jawasakher/weather.web.git'
   },
   {
